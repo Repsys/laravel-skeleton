@@ -74,6 +74,19 @@ services:
         ports:
             - '6385:6379'
 
+#    mongo:
+#        image: mongo:5.0
+#        restart: on-failure
+#        environment:
+#            MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+#            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+#        volumes:
+#            - mongo-data:/data/db
+#        networks:
+#            - app-net
+#        ports:
+#            - '27017:27017'
+
 networks:
     app-net:
         driver: bridge
@@ -81,3 +94,4 @@ networks:
 volumes:
     postgres-data:
     redis-data:
+#    mongo-data:
